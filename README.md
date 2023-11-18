@@ -65,7 +65,7 @@ Please keep your API key confidential and do not share it publicly. If you plan 
 
 ## Deployment 
 
-1. This application is hosted on Streamlit Cloud.Link -> https://chat-pdf-app-aurv438bxqyp23v6zryrz9.streamlit.app/
+1. This application is hosted on Streamlit Cloud.Link -> (https://wikipedia-url-chat-app-bbw3h2ktklx4jbmfkzvbco.streamlit.app/)
    
 
 ## Acknowledgements
