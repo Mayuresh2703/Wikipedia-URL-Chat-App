@@ -1,4 +1,3 @@
-
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
@@ -27,14 +26,20 @@ with st.sidebar:
             if st.sidebar.button(session, key=session):
                 st.session_state.active_session = session
         st.markdown('''
-        ## About :
+        ## About App:
         This app is an LLM powered chatbot  using:
-            - [Streamlit](https://streamlit.io/)
-            - [LangChain](https://python.langchain.com/)
-            - [OpenAI](https://platform.openai.com/docs/models) LLM model
+                    
+        - [Streamlit](https://streamlit.io/)
+        - [Langchain](https://docs.langchain.com/docs/)
+        - [OpenAI](https://openai.com/)
+
+        ## About me:
+
+        - [Github](https://github.com/Mayuresh2703)
 
         ''')
-        st.write("Made by [Mayuresh] (https://github.com/Mayuresh2703)")  
+        st.write("Made by [Mayuresh]")
+                    
 
 def get_wikipedia_content(url):
     response = requests.get(url)
