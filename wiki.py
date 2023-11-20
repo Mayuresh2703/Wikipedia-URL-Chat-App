@@ -55,7 +55,7 @@ def main():
     # api_key = st.text_input("Enter your OpenAI API Key", type="password")
     api_key = st.secrets["openai"]["api_key"]
     if api_key:
-        os.environ["OPENAI_API_KEY"] = api_key
+        os.environ["API_KEY"] = api_key
 
         # Url user input
         st.header("Chat with your URL")
