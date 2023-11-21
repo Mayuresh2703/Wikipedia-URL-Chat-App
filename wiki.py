@@ -78,9 +78,9 @@ def main():
         qa_chain = ConversationalRetrievalChain.from_llm(llm, vector_store.as_retriever())
 
         if "active_session" in st.session_state:
-        for message in st.session_state.chat_sessions[st.session_state.active_session]:
-                with st.text(message["role"]):
-                    st.markdown(message["content"])
+                for message in st.session_state.chat_sessions[st.session_state.active_session]:
+                        with st.text(message["role"]):
+                            st.markdown(message["content"])
             
             # Read user input prompt
         query = st.text_input("Ask your questions from Wkipedia URL ")
