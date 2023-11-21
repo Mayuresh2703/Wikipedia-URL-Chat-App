@@ -61,7 +61,7 @@ def main():
     st.header("Chat with your URL")
     url = st.text_input("Enter the Wikipedia URL: ")
 
-        if url:
+    if url:
             # extract content from the Wkipedia URL
             wiki_content = get_wikipedia_content(url)
 
