@@ -52,16 +52,16 @@ def get_wikipedia_content(url):
 
 def main():
     # Api Key Input
-    # api_key = st.text_input("Enter your OpenAI API Key", type="password")
+    api_key = st.text_input("Enter your OpenAI API Key", type="password")
     # api_key = st.secrets["api_key"]
-    # if api_key:
-    os.environ["API_KEY"] = st.secrets["api_key"]
+    if api_key:
+        os.environ["API_KEY"] = api_key
 
-    # Url user input
-    st.header("Chat with your URL")
-    url = st.text_input("Enter the Wikipedia URL: ")
+        # Url user input
+        st.header("Chat with your URL")
+        url = st.text_input("Enter the Wikipedia URL: ")
 
-    if url:
+        if url:
             # extract content from the Wkipedia URL
             wiki_content = get_wikipedia_content(url)
 
