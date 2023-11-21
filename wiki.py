@@ -53,8 +53,8 @@ def get_wikipedia_content(url):
 def main():
     # Api Key Input
     # api_key = st.text_input("Enter your OpenAI API Key", type="password")
-    open_api_key = st.secrets["OPENAI_API_KEY"]
-    if api_key:
+    openai_api_key = st.secrets["OPENAI_API_KEY"]
+    if openai_api_key:
         os.environ["OPENAI_API_KEY"] = open_api_key
 
         # Url user input
