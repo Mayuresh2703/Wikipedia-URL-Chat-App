@@ -53,7 +53,7 @@ def get_wikipedia_content(url):
 def main():
     # Api Key Input
     # api_key = st.text_input("Enter your OpenAI API Key", type="password")
-    openai_api_key = st.secrets["OPENAI_API_KEY"]
+    openai_api_key = st.secrets.get("OPENAI_API_KEY")
     if openai_api_key:
         os.environ["OPENAI_API_KEY"] = openai_api_key
 
@@ -74,7 +74,7 @@ def main():
             vector_store = FAISS.from_texts(chunks, embedding=embeddings)
             
             # Open AI LLM and initializing a Conversation Chain using langchain
-            llm = OpenAI(api_key = api_key, temperature=0)
+            llm = OpenAI(api_key = openai_api_key, temperature=0)
             qa_chain = ConversationalRetrievalChain.from_llm(llm, vector_store.as_retriever())
 
             if "active_session" in st.session_state:
