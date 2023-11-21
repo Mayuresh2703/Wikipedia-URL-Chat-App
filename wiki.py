@@ -53,9 +53,8 @@ def get_wikipedia_content(url):
 def main():
     # Api Key Input
     api_key = st.text_input("Enter your OpenAI API Key", type="password")
-    # api_key = st.secrets["api_key"]
     if api_key:
-        os.environ["API_KEY"] = api_key
+        os.environ["OPENAI_API_KEY"] = api_key
 
         # Url user input
         st.header("Chat with your URL")
